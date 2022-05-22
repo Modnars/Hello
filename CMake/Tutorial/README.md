@@ -1,8 +1,10 @@
 # [_CMake Tutorial_](https://cmake.org/cmake/help/v3.23/guide/tutorial/index.html)
 
-## Version
+## Information
 
+- Operating System: `CentOS Linux release 7.2 (Final)`
 - CMake Version: `3.23.1`
+- Code Source: [GitHub:CMake](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
 
 ## Steps
 
