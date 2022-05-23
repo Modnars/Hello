@@ -1,1 +1,1 @@
-../STEP01. A Basic Starting Point.md
+../STEP01.A Basic Starting Point.md
