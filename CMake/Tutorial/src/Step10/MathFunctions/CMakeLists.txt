@@ -39,6 +39,7 @@ if(USE_MYMATH)
                         POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS}
                         )
 
+  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 endif()
 
