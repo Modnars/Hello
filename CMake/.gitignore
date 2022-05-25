@@ -7,3 +7,7 @@ _CPack_Packages
 # For Tutorial.Step12
 Tutorial/src/Step12/debug/
 Tutorial/src/Step12/release/
+
+# For Tutorial
+# e.g. Tutorial-1.0-Linux.sh, Tutorial-1.0-Linux.tar.Z, Tutorial-1.0-Linux.tar.gz
+Tutorial-*
