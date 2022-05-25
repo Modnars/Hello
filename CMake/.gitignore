@@ -1,2 +1,9 @@
 # build
 *build
+
+# CPack
+_CPack_Packages
+
+# For Tutorial.Step12
+Tutorial/src/Step12/debug/
+Tutorial/src/Step12/release/
