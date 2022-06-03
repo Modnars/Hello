@@ -1,5 +1,3 @@
-# _Swift_
-
 ![Swift](https://www.swift.org/assets/images/swift.svg)
 
 ## About Swift
