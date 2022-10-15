@@ -23,7 +23,7 @@ let widthLabel = label + String(width)
 // do you get?
 //
 // ANSWER:
-//   Error: "Binary operator '+' cannot be applied to operands of type 'String' 
+//   Error: "Binary operator '+' cannot be applied to operands of type 'String'
 // and 'Int'"
 
 let apples = 3
@@ -41,9 +41,9 @@ let expStr = "Sum of PI and e is \(math_pi + math_e)."
 let expGreeting = "Hello, \(author)!"
 
 let quotation = """
-I said "I have \(apples) apples."
-And then I said "I have \(apples + oranges) pieces of fruit."
-"""
+    I said "I have \(apples) apples."
+    And then I said "I have \(apples + oranges) pieces of fruit."
+    """
 
 var shoppingList = ["catfish", "water", "tulips"]
 shoppingList[1] = "bottle of water"
@@ -83,7 +83,7 @@ var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
 if let name = optionalName {
     greeting = "Hello, \(name)"
-} else { // For the EXPERIMENT.
+} else {  // For the EXPERIMENT.
     greeting = "Hello, Modnar!"
 }
 print(greeting)
@@ -164,7 +164,7 @@ func greet(person: String, day: String) -> String {
 greet(person: "Bob", day: "Tuesday")
 
 // EXPEIMENT:
-//   Remove the `day` parameter. Add a parameter to include today's lunch 
+//   Remove the `day` parameter. Add a parameter to include today's lunch
 // special in the greeting.
 func greet(person: String, lunch: String) -> String {
     return "Hello \(person), today's lunch is \(lunch)!"
@@ -179,7 +179,7 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
     var min = scores[0]
     var max = scores[0]
     var sum = 0
-    
+
     for score in scores {
         if score > max {
             max = score
@@ -188,7 +188,7 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
         }
         sum += score
     }
-    
+
     return (min, max, sum)
 }
 let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
@@ -253,7 +253,7 @@ class Shape {
         return "A shape with \(numberOfSides) sides."
     }
     // EXPERIMENT:
-    //   Add a constant property with `let`, and add another method that takes an 
+    //   Add a constant property with `let`, and add another method that takes an
     // argument.
     let constVal = 0
     func printMessage(message: String) -> String {
@@ -268,11 +268,11 @@ var shapeDescription = shape.simpleDescription()
 class NamedShape {
     var numberOfSides = 0
     var name: String
-    
+
     init(name: String) {
         self.name = name
     }
-    
+
     func simpleDescription() -> String {
         return "A shape with \(numberOfSides) sides."
     }
@@ -280,17 +280,17 @@ class NamedShape {
 
 class Square: NamedShape {
     var sideLength: Double
-    
+
     init(sideLength: Double, name: String) {
         self.sideLength = sideLength
         super.init(name: name)
         numberOfSides = 4
     }
-    
+
     func area() -> Double {
         return sideLength * sideLength
     }
-    
+
     override func simpleDescription() -> String {
         return "A square with sides of length \(sideLength)."
     }
@@ -301,13 +301,13 @@ test.simpleDescription()
 
 class EquilateraTriangle: NamedShape {
     var sideLength: Double = 0.0
-    
+
     init(sideLength: Double, name: String) {
         self.sideLength = sideLength
         super.init(name: name)
         numberOfSides = 3
     }
-    
+
     var perimeter: Double {
         get {
             return 3.0 * sideLength
@@ -316,7 +316,7 @@ class EquilateraTriangle: NamedShape {
             sideLength = newValue / 3.0
         }
     }
-    
+
     override func simpleDescription() -> String {
         return "An equilateral triangle with sides of length \(sideLength)."
     }
@@ -328,16 +328,16 @@ class EquilateraTriangle: NamedShape {
 // `simpleDescription()` method on the `Circle` class.
 class Circle: NamedShape {
     var radius: Double = 0.0
-    
+
     init(radius: Double, name: String) {
         self.radius = radius
         super.init(name: name)
     }
-    
+
     func area() -> Double {
         return 3.14 * radius * radius
     }
-    
+
     override func simpleDescription() -> String {
         return "A circle with radius \(radius)."
     }
@@ -378,7 +378,7 @@ enum Rank: Int {
     case ace = 1
     case two, three, four, five, six, seven, eight, nine, ten
     case jack, queen, king
-    
+
     func simpleDescription() -> String {
         switch self {
         case .ace:
@@ -411,7 +411,7 @@ if let convertedRank = Rank(rawValue: 3) {
 
 enum Suit {
     case spades, hearts, diamonds, clubs
-    
+
     func simpleDescription() -> String {
         switch self {
         case .spades:
@@ -424,7 +424,7 @@ enum Suit {
             return "clubs"
         }
     }
-    
+
     // EXPERIMENT
     //   Add a `color()` method to `Suit` that returns "black" for spades and clubs,
     // and returns "red" for hearts and diamonds.
@@ -591,8 +591,8 @@ do {
 }
 
 // EXPERIMENT:
-//   Add code to throw an error inside the `do` block. What kind of error do you 
-// need to throw so that the error is handled by the first `catch` block? What 
+//   Add code to throw an error inside the `do` block. What kind of error do you
+// need to throw so that the error is handled by the first `catch` block? What
 // about the second and third blocks?
 //
 // ANSWER:
@@ -615,7 +615,7 @@ func fridgeContains(_ food: String) -> Bool {
     defer {
         fridgeIsOpen = false
     }
-    
+
     let result = fridgeContent.contains(food)
     return result
 }
@@ -641,8 +641,7 @@ var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
-    where T.Element: Equatable, T.Element == U.Element
-{
+where T.Element: Equatable, T.Element == U.Element {
     for lhsItem in lhs {
         for rhsItem in rhs {
             if lhsItem == rhsItem {
@@ -658,8 +657,7 @@ anyCommonElements([1, 2, 3], [3])
 //   Modify the anyCommonElements(_:_:) function to make a function that returns an
 // array of the elements that any two sequences have in common.
 func commonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> [T.Element]
-    where T.Element: Equatable, T.Element == U.Element
-{
+where T.Element: Equatable, T.Element == U.Element {
     var ans = [T.Element]()
     for lhsItem in lhs {
         for rhsItem in rhs {
