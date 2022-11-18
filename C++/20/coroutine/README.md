@@ -56,7 +56,6 @@ void main1() {
 ## The coroutine return object
 
 ```cpp
-
 struct ReturnObject2 {
     struct promise_type {
         ReturnObject2 get_return_object() {
