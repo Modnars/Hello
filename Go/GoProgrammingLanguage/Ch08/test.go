@@ -14,6 +14,6 @@ func main() {
 	ch <- 'B'
 	fmt.Println(<-ch)
 	close(ch)
-	fmt.Println(<-ch)
+	fmt.Println(<-ch) // 即使 channel 被 close，依然可以从其中读出未读取的值
 	fmt.Println(<-ch)
 }
