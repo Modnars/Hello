@@ -1,8 +1,10 @@
-/*
- * @Author: modnarshen
- * @Date: 2024.02.26 14:35:59
- * @Note: Copyrights (c) 2024 modnarshen. All rights reserved.
- */
+package intset
+
+import (
+	"bytes"
+	"fmt"
+)
+
 // An IntSet is a set of small non-negative integers.
 // Its zero value represents the empty set.
 type IntSet struct {
@@ -55,6 +57,3 @@ func (s *IntSet) String() string {
 	buf.WriteByte('}')
 	return buf.String()
 }
-
-
-

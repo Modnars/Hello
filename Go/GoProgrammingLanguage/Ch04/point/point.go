@@ -22,4 +22,9 @@ func main() {
 	fmt.Println(pp.Info())
 	fmt.Println((&Point{1, 2}).Info())
 	fmt.Println(Point{1, 2}.ObjInfo())
+
+	p := Point{1, 2}
+	fmt.Printf("%v\n", p)
+	fmt.Printf("%+v\n", p)
+	fmt.Printf("%#v\n", p)
 }
